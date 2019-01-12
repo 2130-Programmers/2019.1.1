@@ -17,7 +17,7 @@ import org.usfirst.frc2130.PlusAlpha.Robot;
 import org.usfirst.frc2130.PlusAlpha.RobotMap;
 import org.usfirst.frc2130.PlusAlpha.commands.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
-//import com.kauailabs.navx.frc.AHRS;
+import com.kauailabs.navx.frc.AHRS;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
