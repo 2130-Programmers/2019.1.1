@@ -110,5 +110,8 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+
+        SmartDashboard.putBoolean("Vision Status", Robot.driveTrainSubsystem.correctAngleValue());
+        SmartDashboard.putNumber("Moving Output", Robot.driveTrainSubsystem.movingOutputDisplay());
     }
 }
