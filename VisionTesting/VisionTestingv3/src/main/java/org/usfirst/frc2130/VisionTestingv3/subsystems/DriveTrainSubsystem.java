@@ -216,7 +216,7 @@ public class DriveTrainSubsystem extends Subsystem {
         turnTo(limelightX);
     }
 
-    public double moveToUsingArea(double current) {
+    public double moveToUsingArea() {
         
     	double tolerance = 40; // The robot will try to get 35 inches from target
         /*double H1 = 41;
@@ -226,7 +226,7 @@ public class DriveTrainSubsystem extends Subsystem {
         
         double output = (H2 - H1) / Math.abs((Math.tan(A1 + A2)));
         */
-        
+        /*
         double kA = 18.2;
         double kB = -71.8;
         double kC = 95.8;
@@ -234,13 +234,15 @@ public class DriveTrainSubsystem extends Subsystem {
         double squaredX = Math.pow(X, 2);
 
         double output = movingOutputValue(kA, kB, kC, X, squaredX);
+        */
 
+        double k = 44;
+
+        double output = k/Math.sqrt(limelightArea);
 
     	if (Math.abs(output) > tolerance) {
-            correctAngle = false;
     		return output;
     	} else {
-            correctAngle = false;
     		return 0.0;
         }
         
@@ -256,7 +258,7 @@ public class DriveTrainSubsystem extends Subsystem {
     }
 
     public void moveTo(double target) {
-        applyMovingPower(moveToUsingArea(target)/100);
+        applyMovingPower(moveToUsingArea());
     }
 
     public void moveToLimelightTarget() {

@@ -112,6 +112,6 @@ public class Robot extends TimedRobot {
         Scheduler.getInstance().run();
 
         SmartDashboard.putBoolean("Vision Status", Robot.driveTrainSubsystem.correctAngleValue());
-        SmartDashboard.putNumber("Moving Output", Robot.driveTrainSubsystem.movingOutputDisplay());
+        SmartDashboard.putNumber("Distance", Robot.driveTrainSubsystem.moveToUsingArea());
     }
 }
