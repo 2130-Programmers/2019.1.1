@@ -111,7 +111,7 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
 
-        SmartDashboard.putBoolean("Vision Status", Robot.driveTrainSubsystem.correctAngleValue());
-        SmartDashboard.putNumber("Distance", Robot.driveTrainSubsystem.moveToUsingArea());
+        //SmartDashboard.putBoolean("Vision Status", Robot.driveTrainSubsystem.correctAngleValue());
+        //SmartDashboard.putNumber("Distance", Robot.driveTrainSubsystem.moveToUsingArea());
     }
 }

@@ -150,7 +150,7 @@ public class DriveTrainSubsystem extends Subsystem {
     // here. Call these from Commands.
 
     /* Autonomous Commands */
-
+    /*
     public double ahrsAngle() {
         return ahrs.getAngle();
     }
@@ -235,7 +235,7 @@ public class DriveTrainSubsystem extends Subsystem {
 
         double output = movingOutputValue(kA, kB, kC, X, squaredX);
         */
-
+        /*
         double k = 44;
 
         double output = k/Math.sqrt(limelightArea);
@@ -265,11 +265,22 @@ public class DriveTrainSubsystem extends Subsystem {
         moveTo(limelightArea);
     }
 
+
+
+
+
+
+    
     /* User Controlled Commands */
 
+    public void setPipeline(int pipeline) {
+		NetworkTableEntry pipelineEntry = table.getEntry("pipeline");
+    	pipelineEntry.setNumber(pipeline);
+    }
 
     public void driveWithDifferential() {
-        differentialDrive.arcadeDrive(-Robot.oi.driverJoy.getRawAxis(1), Robot.oi.driverJoy.getRawAxis(4));
+        differentialDrive.arcadeDrive(Robot.oi.driverJoy.getRawAxis(1) * -1, 
+                                      Robot.oi.driverJoy.getRawAxis(4) * .7);
     }
 
 
