@@ -333,7 +333,7 @@ Children:
       Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
         name: Minimum Output, validators: null, value: -1.0}
       P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-        value: 0.002}
+        value: 0.004}
       Input: !!robotbuilder.data.properties.ChildSelectionProperty
         default: 0
         name: Input
