@@ -112,7 +112,6 @@ public class diffDriveSub extends Subsystem {
 
     public void joystickDriver()
     {
-
         diffDrive.arcadeDrive(Robot.oi.joyfull.getRawAxis(1), 
                               Robot.oi.joyfull.getRawAxis(0));
     }
@@ -126,14 +125,18 @@ public class diffDriveSub extends Subsystem {
     {
         lF.set(-.5);
     }
-
-    public void stopMotors(){
+    public void stopMotors() {
         lF.set(0);
     }
 
-    public void dialDriver()
-    {
+    public void ifStatement() {
+        if(Robot.oi.joy4value() == true && Robot.oi.joy5value() == true) {
+            lF.set(.5);
+            rR.set(.5);
+        }
     }
-
 }
 
+/* public double returnSomething() {
+      return sensor.output;
+} */
