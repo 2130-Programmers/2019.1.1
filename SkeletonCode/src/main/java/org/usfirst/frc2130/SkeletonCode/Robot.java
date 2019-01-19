@@ -85,6 +85,8 @@ public class Robot extends TimedRobot {
         autonomousCommand = chooser.getSelected();
         // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
+        Robot.visionSubsystem.setPipelineBooleanValue(false);
+
     }
 
     /**
@@ -102,6 +104,8 @@ public class Robot extends TimedRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+
+        Robot.visionSubsystem.setPipelineBooleanValue(true);
     }
 
     /**
@@ -111,6 +115,9 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
 
-        SmartDashboard.putBoolean("Pipeline Value", Robot.visionSubsystem.pipelineBooleanValue());
+        SmartDashboard.putBoolean("Pipeline Boolean", Robot.visionSubsystem.pipelineBooleanValue());
+        SmartDashboard.putNumber("Pipeline Value", Robot.visionSubsystem.currentPipelineValue());
+        SmartDashboard.putNumber("X", Robot.driveTrainSubsystem.returnLX());
+        SmartDashboard.putNumber("Output Value", Robot.driveTrainSubsystem.forwardUsingArea());
     }
 }

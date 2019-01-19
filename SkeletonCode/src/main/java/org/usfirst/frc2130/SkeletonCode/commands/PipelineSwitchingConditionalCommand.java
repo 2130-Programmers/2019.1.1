@@ -31,6 +31,6 @@ public class PipelineSwitchingConditionalCommand extends ConditionalCommand {
 
     @Override
     protected boolean condition(){
-        return false;//TODO: Auto Generated method stub
+        return Robot.visionSubsystem.pipelineBooleanValue();
     }
 }
