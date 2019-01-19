@@ -119,5 +119,7 @@ public class Robot extends TimedRobot {
         SmartDashboard.putNumber("Pipeline Value", Robot.visionSubsystem.currentPipelineValue());
         SmartDashboard.putNumber("X", Robot.driveTrainSubsystem.returnLX());
         SmartDashboard.putNumber("Output Value", Robot.driveTrainSubsystem.forwardUsingArea());
+        SmartDashboard.putNumber("POV", Robot.oi.driverJoystick.getPOV());
+        SmartDashboard.putBoolean("Down D Pad", Robot.driveTrainSubsystem.downDPad());
     }
 }

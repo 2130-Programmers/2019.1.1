@@ -96,7 +96,7 @@ public class VisionSubsystem extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     public void setPipeline(int pipeline) {
-        pipelineEntry.setNumber(0);
+        pipelineEntry.setNumber(pipeline);
         currentPipeline = pipeline;
     }
 
