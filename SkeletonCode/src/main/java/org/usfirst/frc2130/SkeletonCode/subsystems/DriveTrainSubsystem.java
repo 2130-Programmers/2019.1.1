@@ -139,8 +139,6 @@ public class DriveTrainSubsystem extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    private int range = 60;
-
     public double forwardUsingArea() {
         double k = 45;
 
@@ -159,24 +157,10 @@ public class DriveTrainSubsystem extends Subsystem {
         
     }
 
-    public int turnUsingOffset() {
+    public double createOffset() {
+        double x = limelightX;
 
-        double k = 45;
-
-        double output = k/Math.sqrt(limelightArea);
-
-        if (output > 35) {
-            if (limelightX >= 5) {
-                return 0;
-            } else if (limelightX <= -5) {
-                return 1;
-            } else {
-                return 2;
-            }
-        } else {
-            return 3;
-        }
-        
+        return x/2;
     }
 
     public double returnLX() {
