@@ -237,7 +237,7 @@ public class DriveTrainSubsystem extends Subsystem {
         */
         /*
         double k = 44;
-
+        
         double output = k/Math.sqrt(limelightArea);
 
     	if (Math.abs(output) > tolerance) {
