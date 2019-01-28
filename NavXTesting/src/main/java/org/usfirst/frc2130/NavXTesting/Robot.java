@@ -109,6 +109,6 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
 
-        SmartDashboard.putNumber("Yaw", Robot.navXSubsystem.accelValue());
+        SmartDashboard.putNumber("Pitch", Robot.navXSubsystem.navXPitch());
     }
 }
