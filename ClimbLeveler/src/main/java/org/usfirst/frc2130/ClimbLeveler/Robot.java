@@ -43,7 +43,7 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
 
-        navX = new NavX()
+        navX = new NavX();
         climber = new Climber(navX);
 
         // OI must be constructed after subsystems. If the OI creates Commands

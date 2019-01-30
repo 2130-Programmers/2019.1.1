@@ -9,9 +9,9 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc2130.DemoLeveler;
+package org.usfirst.frc2130.ClimbLeveler;
 
-import org.usfirst.frc2130.DemoLeveler.commands.*;
+import org.usfirst.frc2130.ClimbLeveler.commands.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 

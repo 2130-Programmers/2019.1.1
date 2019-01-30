@@ -3,10 +3,7 @@ package org.usfirst.frc2130.ClimbLeveler.subsystems;
 import org.usfirst.frc2130.ClimbLeveler.commands.*;
 import org.usfirst.frc2130.ClimbLeveler.subsystems.NavX;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
-import edu.wpi.first.wpilibj.PIDSource;
-import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
 
 public class Climber extends PIDSubsystem {

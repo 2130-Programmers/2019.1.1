@@ -9,9 +9,9 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc2130.DemoLeveler.commands;
+package org.usfirst.frc2130.ClimbLeveler.commands;
 import edu.wpi.first.wpilibj.command.Command;
-import org.usfirst.frc2130.DemoLeveler.Robot;
+import org.usfirst.frc2130.ClimbLeveler.Robot;
 
 /**
  *

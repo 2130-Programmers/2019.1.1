@@ -16,8 +16,6 @@ import org.usfirst.frc2130.ClimbLeveler.commands.*;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.PIDOutput;
-import edu.wpi.first.wpilibj.PIDSource;
 import edu.wpi.first.wpilibj.SPI;
 
 
@@ -50,6 +48,11 @@ public class NavX extends Subsystem {
     public double navXPitch() {
         return ahrs.getPitch();
     }
+
+	@Override
+	protected void initDefaultCommand() {
+		
+	}
 
 }
 
