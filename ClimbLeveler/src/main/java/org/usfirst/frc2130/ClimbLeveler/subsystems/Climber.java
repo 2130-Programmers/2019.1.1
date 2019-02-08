@@ -4,12 +4,12 @@ import org.usfirst.frc2130.ClimbLeveler.commands.*;
 import org.usfirst.frc2130.ClimbLeveler.subsystems.NavX;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.Talon;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 public class Climber extends PIDSubsystem {
 
-    private Talon front;
-    private Talon back;
+    private WPI_TalonSRX front;
+    private WPI_TalonSRX back;
     private NavX navX;
 
     private double collectiveOutput;
@@ -17,7 +17,7 @@ public class Climber extends PIDSubsystem {
     // Initialize your subsystem here
     public Climber(NavX navX) {
         // @TODO: These gains need to be updated. Start with P gain.
-        super("Climber", 1.0, 0.0, 0.0);
+        super("Climber", 0.00001, 0.0, 0.0);
 
         //Set local refernce to NavX for getting pitch command
         this.navX = navX;
@@ -30,11 +30,11 @@ public class Climber extends PIDSubsystem {
         getPIDController().setName("Climber", "PIDSubsystem Controller");
         LiveWindow.add(getPIDController());
 
-        front = new Talon(0);
+        front = new WPI_TalonSRX(1);
         addChild("Front", front);
         front.setInverted(false);
         
-        back = new Talon(1);
+        back = new WPI_TalonSRX(3);
         addChild("Back", back);
         back.setInverted(false);
         
