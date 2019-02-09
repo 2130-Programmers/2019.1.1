@@ -80,6 +80,7 @@ public class Robot extends TimedRobot {
         autonomousCommand = chooser.getSelected();
         // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
+        Robot.navX.zeroNavX();
     }
 
     /**
@@ -97,6 +98,7 @@ public class Robot extends TimedRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        Robot.navX.zeroNavX();
     }
 
     /**
@@ -105,5 +107,6 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("Roll", Robot.navX.navXRoll());
     }
 }

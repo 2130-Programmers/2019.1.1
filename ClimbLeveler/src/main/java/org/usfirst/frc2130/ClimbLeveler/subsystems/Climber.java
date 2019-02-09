@@ -17,7 +17,7 @@ public class Climber extends PIDSubsystem {
     // Initialize your subsystem here
     public Climber(NavX navX) {
         // @TODO: These gains need to be updated. Start with P gain.
-        super("Climber", 0.00001, 0.0, 0.0);
+        super("Climber", 0.05, 0.0, 0.0);
 
         //Set local refernce to NavX for getting pitch command
         this.navX = navX;
@@ -25,7 +25,7 @@ public class Climber extends PIDSubsystem {
         // Initialize collective output to disable climbing
         collectiveOutput = 0.0;
 
-        setAbsoluteTolerance(0.2);
+        setAbsoluteTolerance(3);
         getPIDController().setContinuous(false);
         getPIDController().setName("Climber", "PIDSubsystem Controller");
         LiveWindow.add(getPIDController());
@@ -53,7 +53,7 @@ public class Climber extends PIDSubsystem {
         //
         // Assume here that positive pitch means the the front of the robot
         // is tilted up, that means that the front motor needs to slow down.
-        return navX.navXPitch();
+        return navX.navXRoll();
 
     }
 

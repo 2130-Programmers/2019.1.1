@@ -45,8 +45,12 @@ public class NavX extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    public double navXPitch() {
-        return ahrs.getPitch();
+    public double navXRoll() {
+        return ahrs.getRoll();
+    }
+
+    public void zeroNavX() {
+        ahrs.reset();
     }
 
 	@Override
